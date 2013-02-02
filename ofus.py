@@ -19,20 +19,8 @@ def run_cmd(cmd):
 
 while 1:
     lcd.clear()
-#    ipaddr = run_cmd(cmd)
     lcd.message(datetime.now().strftime('%b %d  %H:%M:%S\n'))
-#    lcd.message('IP %s' % ( ipaddr ) )
-#    sleep(2)
     lcd.message('Ofus is teh win!')
-    sleep(1)
+    sleep(2)
     
 print "BYE"
-#GPIO.cleanup() 
-#
-#
-#try:
-#    while 1:
-#        print "BEEP"
-#        sleep(1)
-#except KeyboardInterrupt:
-#            print "BYE BYE"
