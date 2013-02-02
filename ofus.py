@@ -20,9 +20,10 @@ def run_cmd(cmd):
 try:
     while 1:
         lcd.clear()
-#        lcd.message(datetime.now().strftime('%b %d  %H:%M:%S\n'))
-        lcd.message('Ofus')
-        lcd.scrollDisplayRight()
+        ipaddr = run_cmd(cmd)
+        lcd.message(datetime.now().strftime('%b %d  %H:%M:%S\n'))
+        lcd.message('IP %s' % ( ipaddr ) )
+#        lcd.message('Ofus')
         sleep(2)
 except KeyboardInterrupt:
     print "BYE"
