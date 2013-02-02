@@ -17,10 +17,11 @@ def run_cmd(cmd):
     output = p.communicate()[0]
     return output
 
-while 1:
-    lcd.clear()
-    lcd.message(datetime.now().strftime('%b %d  %H:%M:%S\n'))
-    lcd.message('Ofus is teh win!')
-    sleep(2)
-    
-print "BYE"
+try:
+    while 1:
+        lcd.clear()
+        lcd.message(datetime.now().strftime('%b %d  %H:%M:%S\n'))
+        lcd.message('Ofus is teh win!')
+        sleep(2)
+except KeyboardInterrupt:
+    print "BYE"
